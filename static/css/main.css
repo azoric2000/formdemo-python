@@ -1,0 +1,362 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+body {
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 128, 0.8);
+  background-size: cover;
+  color: #f6f6f6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12rem;
+  font-size: 1.5rem;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  overflow: hidden;
+}
+
+.main.card {
+  z-index: 10;
+  min-height: 50vh;
+  margin: 1.5rem auto 4.5rem auto;
+  padding: 1rem 2.5rem 1.5rem 2.5rem;
+  width: 99rem;
+  border-radius: 2rem;
+}
+.main.card .comicGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  max-width: 94rem;
+  min-width: fit-content;
+  margin: 0 auto;
+}
+.main.card .comicGrid.singlebook {
+  grid-template-columns: 1fr;
+  width: fit-content;
+  min-width: 30rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 30rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+li {
+  margin-bottom: 1.2rem;
+}
+
+ul {
+  padding-left: 1.8rem;
+}
+
+.right {
+  text-align: right;
+}
+
+hr {
+  color: #330000;
+}
+
+.divider {
+  margin: 15px auto;
+  width: 100%;
+  height: 0.05rem;
+  background-color: #f6f6f6;
+  box-shadow: 0px 0px 2px 2px #BB3333;
+  border-radius: 2px;
+  clear: both;
+}
+
+.issuesGrid {
+  margin: 1rem 0 0 2rem;
+}
+
+h2 {
+  color: #330000;
+  text-shadow: #f6f6f6 0rem 0rem 0.5rem;
+}
+
+@media screen and (max-width: 989px) {
+  .main {
+    width: 100vw;
+    padding: 1rem;
+  }
+  .main .comicGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+  h2 {
+    color: #f6f6f6;
+    text-shadow: #363636 0rem 0rem 0.5rem;
+  }
+}
+.navbar {
+  box-shadow: #f6f6f6 0 0 2rem;
+  background-color: #001F3F;
+  border-bottom: 0.1rem #f6f6f6 solid;
+  font-size: 1.4rem;
+  height: 8.5rem;
+  padding: 2.5rem;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
+}
+.navbar .wrapper {
+  max-width: 99rem;
+  margin: 0 auto;
+}
+.navbar .wrapper .grid {
+  display: grid;
+  grid-template-columns: 25rem 15rem 15rem 15rem;
+}
+.navbar a {
+  color: #f6f6f6;
+  font-size: 1.8rem;
+  font-weight: 600;
+  height: 36px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+.navbar a.textLink {
+  width: 15rem;
+  text-align: center;
+  background-color: #BB3333;
+}
+.navbar a.textLink.active {
+  background-color: #f6f6f6;
+  color: #000069;
+}
+.navbar a.textLink:nth-child(2) {
+  border-top-left-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+}
+.navbar a.textLink:last-child {
+  border-top-right-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+}
+.navbar a.home, .navbar a.home.active {
+  background-color: #001F3F;
+  margin: -2.3rem 0 0 2rem;
+  padding: 0;
+}
+.navbar a.home img, .navbar a.home.active img {
+  height: 8rem;
+}
+.navbar .mobileMenu,
+.navbar .mobileNav {
+  display: none;
+}
+
+@media screen and (max-width: 989px) {
+  .navbar {
+    padding: 2.5rem 0 0 0;
+  }
+  .navbar .wrapper {
+    width: 100vw;
+  }
+  .navbar .wrapper .grid {
+    display: block;
+    margin-top: -2.5rem;
+    width: 80%;
+  }
+  .navbar .wrapper .grid .textLink {
+    display: none;
+  }
+  .navbar .wrapper .grid .textLink.active {
+    display: inline-block;
+    vertical-align: top;
+    margin: 2.5rem 3rem;
+    width: fit-content;
+  }
+  .navbar .mobileMenu {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    font-size: 5rem;
+    top: 1.5rem;
+  }
+  .navbar .mobileNav {
+    display: none;
+    background-color: #001F3F;
+    height: calc(100vh - 13.4rem);
+  }
+  .navbar .mobileNav a {
+    display: block;
+    font-size: 3rem;
+    height: 5.5rem;
+    width: 100%;
+    line-height: 5rem;
+    border-bottom: solid 0.1rem #f6f6f6;
+    padding-left: 2rem;
+  }
+  .navbar .mobileNav.open {
+    display: block;
+  }
+}
+.card {
+  box-shadow: #f6f6f6 0 0 2rem;
+  background-color: #f6f6f6;
+  border: solid 0.2rem #BB3333;
+  border-radius: 1.2rem;
+  color: #330000;
+  font-size: 1.5rem;
+  margin: 0 auto 2rem auto;
+  padding: 2.5rem;
+  position: relative;
+  height: fit-content;
+  width: 98%;
+  transition: all 0.5s ease-in-out;
+}
+.card .card {
+  background-color: rgb(220.5, 220.5, 220.5);
+}
+.card.full {
+  width: 100%;
+  height: fit-content;
+}
+.card:hover {
+  box-shadow: #BB3333 0 0 2rem;
+}
+.card .editIcon {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-color: #BB3333;
+  border-radius: 0.5rem;
+  color: #f6f6f6;
+  float: right;
+  font-size: 3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.card .editIcon:hover {
+  background-color: #330000;
+}
+.card .detailIcon {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  background-color: #000069;
+  border-radius: 0.5rem;
+  color: #f6f6f6;
+  float: right;
+  font-size: 3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.card .detailIcon:hover {
+  background-color: #BB3333;
+}
+.card span {
+  display: inline-block;
+}
+
+@media screen and (max-width: 989px) {
+  .card.full {
+    width: calc(100vw - 2rem);
+  }
+  .editIcon {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}
+.footer {
+  background-color: #001F3F;
+  border-top: 0.1rem solid #f6f6f6;
+  color: #f6f6f6;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-top: 1.5rem;
+  position: fixed;
+  height: 4.5rem;
+  text-align: center;
+  top: calc(100vh - 4.5rem);
+  width: 100vw;
+}
+.footer a {
+  text-shadow: #363636 0rem 0rem 0.5rem;
+  color: #f6f6f6;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+input, select, button {
+  height: 3.6rem;
+  border: solid 1px #001F3F;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem 1rem 0;
+  color: #001F3F;
+  font-weight: 300;
+  font-size: 1.4rem;
+  width: 20rem;
+}
+.error {
+  color: #ff0000;
+}
+.error input,
+.error  select {
+  border: #FF0000 solid 1px;
+
+}
+
+
+label {
+  display: inline-block;
+  cursor: pointer;
+  min-width: 10rem;
+  max-width: fit-content;
+}
+
+button {
+  min-width: 5rem;
+  width: fit-content;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #f6f6f6;
+  background-color: #363636;
+  cursor: pointer;
+}
+button.primary {
+  background-color: #BB3333;
+}
+button.primary:hover {
+  background-color: #330000;
+}
+button.secondary {
+  background-color: #000069;
+}
+button.secondary:hover {
+  background-color: #001F3F;
+}
+
+/*# sourceMappingURL=main.css.map */
